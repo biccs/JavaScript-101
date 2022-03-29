@@ -30,7 +30,7 @@ console.log(filteredProducts);
 
 //**MAP
 //Helps iterate and manipulate elements of ARRAY
-//Creates new array, doesn't modify original
+//Creates new array from elements of old array, doesn't modify original
 // ".map( function( element ) { //logic });"
 //Returns a new array of the names of the elements of the old array
 var newProducts = product.map(function (element) {
@@ -41,6 +41,7 @@ console.log(newProducts);
 //**FIND
 //Validates through a condition if an element exists or not and does something after
 //Creates new array, doesn't modify original
+//Returns the first object it finds
 //If it finds the object, returns it, if not doesn't return anything
 // ".find(function(element){//Condition/logic})"
 //Returns an object only if condition met
