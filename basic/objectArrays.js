@@ -22,6 +22,7 @@ var product = [
 // code for each iteration over the array
 //- It doesnt modify the original array
 //- Creates/Stores the value in new array
+//Creates new array from condition met
 var filteredProducts = product.filter(function (element) {
   return element.stock > 30;
 });
@@ -29,12 +30,42 @@ console.log(filteredProducts);
 
 //**MAP
 //Helps iterate and manipulate elements of ARRAY
-//Create new array, doesn't modify original
+//Creates new array, doesn't modify original
 // ".map( function( element ) { //logic });"
-//Return a new array of the names of the elements of the old array
+//Returns a new array of the names of the elements of the old array
 var newProducts = product.map(function (element) {
   return element.name;
 });
 console.log(newProducts);
+
+//**FIND
+//Validates through a condition if an element exists or not and does something after
+//Creates new array, doesn't modify original
+//If it finds the object, returns it, if not doesn't return anything
+// ".find(function(element){//Condition/logic})"
+//Returns an object only if condition met
+var foundProduct = product.find(function (element) {
+  return element.name === "Cocacola";
+});
+console.log(foundProduct);
+
+//**FOREACH
+//Iterates through array to retrieve or manipulate information as a copy
+//Doesn't modify the original array
+//Doesn't create a new array
+// ".forEach( function( element ) { //Code });"
+product.forEach(function (element) {
+  console.log(`- Product name: ${element.name}`);
+});
+
+//**SOME
+//Returns a true or false validation upon elements meeting certain criteria
+//Doesn't generate any array
+// ".some(function(element){//Validation})"
+//Returns True or False if there is any element whose price is equal or below 14.
+var validatedProduct = product.some(function (element) {
+  return element.price <= 14;
+});
+console.log(validatedProduct);
 
 //** RUN on terminal with 'node objectArrays.js' **
